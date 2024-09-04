@@ -1,0 +1,99 @@
+.settings {
+    .settings-main-card {
+        border-radius: $border-radius-lg;
+        background-color: var(--main-card-background-color);
+        margin-bottom: 8px;
+
+        .settings-list {
+            .user-item {
+                border-radius: $border-radius;
+                margin: 8px 0px;
+                background-color: var(--card-background-color);
+                transition: 0.3s ease-in-out all;
+                padding: 10px;
+
+                &:hover {
+                    box-shadow: var(--background-color) 0px 2px 5px -1px, var(--background-color) 0px 1px 3px -1px;
+                }
+
+                .span-label {
+                    display: block;
+                    font-size: $font-size-xs;
+                    color: var(--color-text);
+                    text-transform: uppercase;
+                    margin: 0;
+                    line-height: 1;
+                    transition: 0.3s ease-in-out all;
+                    font-weight: $font-weight-bold;
+                }
+
+                h6,
+                p {
+                    font-weight: $font-weight-bold;
+                    text-transform: capitalize;
+                    // color: $dark-grey-color;
+                    color: var(--color-text);
+                }
+
+            }
+
+            .settings-item {
+                border-radius: $border-radius;
+                margin: 8px 0px;
+                background-color: var(--card-background-color);
+                transition: 0.3s ease-in-out all;
+                padding: 10px;
+
+                &:hover {
+                    box-shadow: var(--background-color) 0px 2px 5px -1px, var(--background-color) 0px 1px 3px -1px;
+                }
+
+                .span-label {
+                    display: block;
+                    font-size: $font-size-xs;
+                    color: var(--color-text);
+                    text-transform: uppercase;
+                    margin: 0;
+                    line-height: 1;
+                    transition: 0.3s ease-in-out all;
+                    font-weight: $font-weight-bold;
+                }
+
+                h6,
+                p {
+                    font-weight: $font-weight-bold;
+                    text-transform: capitalize;
+                    color: var(--color-text);
+                }
+            }
+        }
+
+        .admin-page-item {
+            border-radius: $border-radius;
+            margin: 8px 0px;
+            transition: 0.3s ease-in-out all;
+            padding: 10px;
+            background-color: $white-color;
+
+            &.pending {
+                border-right: 5px solid $danger-color;
+            }
+
+            &:hover {
+                background-color: $hover-color;
+            }
+
+            .span-label {
+                display: block;
+                font-size: $font-size-xs;
+                color: $primary-color;
+                text-transform: uppercase;
+                margin: 0;
+                // line-height: 1;
+                transition: 0.3s ease-in-out all;
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+
+}

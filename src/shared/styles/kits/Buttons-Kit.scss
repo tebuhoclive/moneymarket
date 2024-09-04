@@ -1,0 +1,151 @@
+.btn {
+  padding: $btn-padding;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  font-weight: $font-weight-bold;
+  color: $white-color;
+  letter-spacing: $letter-spacing;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  margin: 0 2px;
+  height: 35px;
+  // min-width: 110px;
+
+  &.btn-primary {
+    background-color: $primary-btn;
+
+    &:hover {
+      box-shadow: 0 10px 14px rgba($primary-btn, 0.4);
+    }
+  }
+
+  &.btn-outline-primary {
+    background-color: $background-color-light;
+    border: none;
+    color: $primary-btn;
+    &:hover {
+      background-color: $primary-btn;
+      color: $background-color-light;
+      box-shadow: 0 10px 14px rgba(var(--primary-btn), 0.4);
+    }
+  }
+
+  &.btn-primary-in-active {
+    background-color: $grey-color !important;
+
+    &:hover {
+      box-shadow: 0 10px 14px rgba($primary-btn, 0.4);
+    }
+  }
+
+  &.btn-danger {
+    background-color: $danger-color;
+
+    &:hover {
+      box-shadow: 0 10px 14px rgba($danger-color, 0.4);
+    }
+  }
+
+  &.btn-warning {
+    background-color: $hover-color;
+    color: black;
+
+    &:hover {
+      box-shadow: 0 10px 14px rgba($hover-color, 0.4);
+    }
+  }
+
+  &:disabled {
+    background-color: $grey-color;
+    cursor: not-allowed;
+
+    &:hover {
+      box-shadow: 0 10px 14px rgba($grey-color, 0.4);
+    }
+  }
+}
+
+// text-buttons
+.btn-text {
+  padding: $btn-padding;
+  border-radius: $border-radius;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  color: $black-color !important;
+  background-color: $hover-color;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  letter-spacing: $letter-spacing;
+
+  &.btn-primary {
+    background-color: $primary-btn;
+  }
+
+  &.btn-secondary {
+    color: $white-color;
+  }
+
+  &.btn-disabled {
+    color: $grey-color;
+    cursor: not-allowed;
+  }
+
+  &.btn-danger {
+    background-color: $danger-color;
+  }
+}
+
+// icon-buttons
+.btn-icon {
+  padding: $btn-padding-sm;
+  border-radius: $border-radius;
+  margin: 0 2px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: $white-color;
+  border: none;
+
+  &.btn-disabled {
+    color: $grey-color;
+    cursor: not-allowed;
+  }
+
+  &.btn-primary {
+    background-color: $primary-btn;
+
+    &:hover {
+      box-shadow: 0 10px 14px rgba($primary-btn, 0.4);
+    }
+  }
+
+  &.btn-danger {
+    background-color: $danger-color;
+
+    &:hover {
+      box-shadow: 0 10px 14px rgba($danger-color, 0.4);
+    }
+  }
+}
+
+.kit-btn-back {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: $secondary-btn;
+  line-height: 1;
+  margin: 0;
+
+  span {
+    transition: 0.3s all ease-in-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    span {
+      margin-right: 5px;
+    }
+  }
+}

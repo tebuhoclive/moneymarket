@@ -1,0 +1,142 @@
+.lock {
+  background-color: #051e38;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, rgba(0, 0, 0, 0) 20%);
+    background-size: 50px 50px;
+    background-position: 0% 0%;
+    animation: moveBubbles 60s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes moveBubbles {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+
+    100% {
+      transform: translateX(-66.6%) translateY(-66.6%);
+    }
+  }
+
+  .card {
+    background-color: rgba(255, 255, 255, 0.651); // Adjust transparency here
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+
+  .logo-container {
+    margin-bottom: 20px;
+
+    .company-logo {
+      max-width: 100px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .clipart {
+    margin-bottom: 20px;
+
+    .avatar-username {
+      font-size: 15px;
+      color: #051e38;
+      padding: 15px;
+      border-radius: 50%;
+
+      .name {
+        font-weight: 700;
+        font-size: 30px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .password-input {
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #000;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
+
+  .caps-lock-warning {
+    color: rgb(0, 30, 129);
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .sign-in-button {
+    width: 100%;
+  }
+
+  .sign-in-button:hover {
+    background-color: #0056b3;
+  }
+
+  .form {
+    text-align: center;
+  }
+
+  .time-date-display {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    text-align: right;
+    z-index: 1;
+
+    .time-display {
+      font-size: 20px;
+    }
+
+    .date-display {
+      font-size: 16px;
+    }
+  }
+}

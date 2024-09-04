@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import "../../../../../shared/styles/Variables.scss";
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.client-statement-tabs {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .tabs {
+    display: flex;
+    position: relative;
+    background-color: $grey-color;
+    box-shadow: 0 0 1px 0 rgba($primary-color, 0.15),
+      0 6px 12px 0 rgba($primary-color, 0.15);
+    border-radius: 6px; // just a high number to create pill effect
+
+    * {
+      z-index: 2;
+      color:#fff;
+    }
+    height: 40px;
+    .tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      width: 200px;
+      font-size: $font-size-md;
+      font-weight: 600;
+      font-family: "Inter";
+      color:#fff;
+      cursor: pointer;
+      transition: color 0.15s ease-in;
+    }
+    height: 30px;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 200px;
+    font-size: $font-size-md;
+    font-weight: 600;
+    font-family: "Inter";
+    color:#fff;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+  }
+
+  .notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 0.75rem;
+    border-radius: 50%;
+    background-color: $primary-color;
+    color: $white-color;
+    transition: 0.15s ease-in;
+  }
+
+  input[type="radio"]:checked {
+    /* Styles for the checked radio button */
+    color: $white-color !important;
+  }
+
+  input[id="client-view-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  input[id="correction-view-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  input[id="fee-view-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(200%);
+      }
+    }
+  }
+
+  input[id="month-end-view-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(300%);
+      }
+    }
+  }
+
+  .glider {
+    position: absolute;
+    display: flex;
+    height: 30px;
+    width: 200px;
+    background-color: $primary-dark;
+    color: #fff;
+    z-index: 1;
+    border-radius: 6px; // just a high number to create pill effect
+    transition: 0.25s ease-out;
+  }
+
+  @media (max-width: 700px) {
+    .tabs {
+      transform: scale(0.6);
+    }
+  }
+}

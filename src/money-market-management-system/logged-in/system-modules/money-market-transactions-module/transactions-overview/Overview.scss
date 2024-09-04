@@ -1,0 +1,28 @@
+.overview {
+  * {
+    color: var(--color-text);
+  }
+  .uk-card-title {
+    color: var(--color-text);
+    text-transform: uppercase;
+  }
+  .value {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: right;
+  }
+  .graphs {
+    padding: 2rem;
+  }
+  .donut-title {
+    text-align: center;
+  }
+  .donut-container {
+    padding: 2rem;
+    text-align: center;
+  }
+  .donut-grid {
+    // border: 2px var(--color-text) solid;
+    border-radius: 2rem;
+  }
+}

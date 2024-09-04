@@ -1,0 +1,170 @@
+.ijg-navbar {
+  background-color: var(--color-page-background);
+  height: 60px;
+  margin-bottom: -40px;
+
+  .navbar-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-weight: $font-weight-semibold;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    color: var(--color-text);
+
+    .icon {
+      transition: all 0.3s ease-in-out;
+
+      span {
+        width: 30px;
+      }
+    }
+
+    p {
+      font-size: $font-size-md;
+      width: clamp(calc(100% - 30px), 300px, 100%);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .icon {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .navbar-right {
+    margin-right: 5px;
+  }
+
+  .avatar-li-item {
+    display: flex;
+    align-items: center;
+
+    .avatar-username {
+      font-size: $font-size-md;
+      color: var(--color-text);
+      line-height: 1;
+      margin: 0 10px 0 20px;
+
+      .name {
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+      }
+
+      .job-title {
+        font-size: $font-size-xs;
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+        width: 200px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    .user-avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: $white-color;
+      border: 1px solid $grey-color;
+      cursor: pointer;
+
+      .avatar-initials {
+        color: $grey-color;
+        font-weight: $font-weight-semibold;
+        margin: 0;
+      }
+    }
+  }
+
+  .switch-label {
+    width: 180px;
+    color: var(--color-text);
+    /* Adjust width to make it smaller */
+    height: 20px;
+    /* Adjust height to make it smaller */
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    /* Adjust width to make it smaller */
+    height: 20px;
+    /* Adjust height to make it smaller */
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+    /* Ensure border-radius matches half of height for rounded appearance */
+    z-index: 1;
+    /* Ensure the slider is above the icon */
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: $white-color;
+    transition: .4s;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  input:checked+.slider {
+    background-color: $primary-dark;
+  }
+
+  // input:focus+.slider {
+  //   // box-shadow: 0 0 1px $primary-dark;
+  // }
+
+  input:checked+.slider:before {
+    transform: translateX(20px);
+    /* Adjust the translation based on the width of the switch */
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 20px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+}
+
+@media screen and (min-width: 967px) {
+  .navbar-right {
+    margin-right: 4em !important;
+  }
+}

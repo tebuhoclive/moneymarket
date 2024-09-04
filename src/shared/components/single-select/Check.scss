@@ -1,0 +1,32 @@
+/* SingleSelect.module.scss */
+
+/* Styles for the Autocomplete component */
+.custom-component {
+    width: 100%;
+    background-color: #fff;
+    border: none !important;
+    border-radius: 6px !important;
+
+
+    .MuiInputLabel-formControl {
+        display: none !important;
+        border: none !important;
+    }
+
+    .MuiInputBase-formControl {
+        height: 30px !important;
+        border: none !important;
+        border-radius: 6px !important;
+    }
+
+    .MuiInputBase-input,
+    .MuiOutlinedInput-input,
+    .MuiInputBase-inputAdornedEnd,
+    .MuiAutocomplete-input,
+    .MuiAutocomplete-inputFocused {
+        margin-top: -15px !important;
+        height: 30px !important;
+        border: none !important;
+        border-radius: 6px !important;
+    }
+}

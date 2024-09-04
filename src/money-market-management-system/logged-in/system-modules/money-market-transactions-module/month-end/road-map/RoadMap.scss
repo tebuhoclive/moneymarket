@@ -1,0 +1,70 @@
+// RoadMap.scss
+.page {
+//   background: #f4f4f9;
+//   padding: 2rem 0;
+
+  .road-map-container {
+    background: rgb(255, 251, 251);
+    border-radius: 8px;
+    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .road-map {
+    text-align: center;
+
+    h3 {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 2rem;
+    }
+
+    .stepper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        text-align: center;
+ width:200,;
+
+        .step-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          background-color: #01aced;
+          border-radius: 50%;
+          color: white;
+          margin-bottom: 0.5rem;
+          z-index: 1;
+        }
+
+        .step-label {
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: #333;
+          max-width: 120px;
+        }
+
+        &:not(:last-child) .step-connector {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: calc(100% - 50px);
+          height: 4px;
+          background-color: #01aced;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}

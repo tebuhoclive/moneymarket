@@ -1,0 +1,62 @@
+.logged-out {
+  height: 100vh;
+  background: url("../../../assets/bg.jpg") transparent !important;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6) !important;
+  overflow: hidden;
+
+  .login-container {
+    height: 90%;
+    padding: 150px 200px;
+
+    .login-form {
+      padding: 20px 30px;
+      box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6) !important;
+      border-radius: $border-radius;
+      position: relative;
+      .uk-form-label {
+        color: #e7eef3 !important;
+      }
+
+      .main-title-lg {
+        color: #e7eef3;
+      }
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+    }
+
+    .login-logo {
+      background-color: #e7eef3;
+
+      .logo {
+        z-index: 1;
+        position: relative;
+        top: 20% !important;
+        width: 350px !important;
+        line-height: 1;
+      }
+    }
+
+    .password-input-container {
+      position: relative;
+    }
+
+    .password-toggle {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #555;
+      font-size: 0.9em;
+      outline: none;
+    }
+
+    .password-toggle:hover {
+      color: #333;
+    }
+  }
+}

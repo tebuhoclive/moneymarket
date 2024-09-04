@@ -1,0 +1,95 @@
+.drawer-content {
+  position: fixed;
+  z-index: 981;
+  width: $drawer-width;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 100%;
+  background: var(--drawer-background-color);
+  border-top-left-radius: $border-radius-xl;
+  border-bottom-left-radius: $border-radius-xl;
+  // overflow-y: scroll;
+  top: 0;
+  .drawer-split-view-visible-scrollbar {
+    display: block;
+    width: $drawer-width;
+    overflow-y: scroll;
+    height: 96%;
+    padding: $padding-sm-2;
+    margin: $margin-sm-1 auto;
+    // outline: 2px dashed cornflowerblue;
+  }
+  .drawer-split-view-visible-scrollbar::-webkit-scrollbar {
+    width:$small-width-2;
+    height:$xs-small-height;
+    background-color: $muted-grey-color; /* or add it to the track */
+  }
+  .drawer-split-view-visible-scrollbar::-webkit-scrollbar-thumb {
+    background: $primary-dark;
+  }
+  .drawer-list {
+    // padding: 5px;
+
+    ul.main-list {
+      list-style: none;
+      margin: 0;
+
+      .list-item {
+        margin-bottom: 4px;
+        overflow: hidden;
+
+        &.uk-parent.uk-open {
+          .down-arrow {
+            position: absolute;
+            right: 5px;
+            transform: rotate(180deg);
+          }
+        }
+
+        .navlink {
+          position: relative;
+          padding: 0.5em;
+          font-size: $font-size-md;
+          transition: 0.3s ease-in-out all;
+          color: var(--color-text);
+          .down-arrow {
+            position: absolute;
+            right: 5px;
+            top: 8px;
+            transition: transform 0.3s ease-in-out;
+          }
+        }
+
+        .active {
+          background-color: $primary-dark;
+          color: $white-color;
+        }
+
+        .uk-nav-sub {
+          padding: 5px 0 5px 0px;
+
+          .navlink {
+            border-left: 4px solid transparent;
+            font-weight: 0 !important;
+          }
+
+          .active {
+          }
+        }
+      }
+    }
+  }
+}
+
+.uk-offcanvas-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -200px;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 20px 20px;
+  background: var(--drawer-background-color);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}

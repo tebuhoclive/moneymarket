@@ -1,0 +1,103 @@
+.submit-alert {
+  background-color: white;
+  margin: 40px;
+  padding: 20px;
+  width: max-content;
+  border-radius: 15px;
+  text-align: start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    h3 {
+      width: 343px;
+      height: 28px;
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 28px;
+      color: #424242;
+      margin: 0 0 0 10px;
+    }
+  }
+  h4 {
+    width: 431px;
+    height: 72px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #757575;
+    margin: 0px;
+  }
+  .submit-alert > div:first-child {
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+  .submit-alert h3 {
+    margin: 0 0 0 10px;
+  }
+
+  .submit-alert div:nth-child(2) {
+    font-size: 16px;
+    color: #333;
+  }
+  .alert-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    .button-yes {
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 16px;
+      gap: 8px;
+      min-width: 40px;
+      height: 36px;
+      background: #f9c132;
+      border-radius: 8px;
+      margin-right: 0.5rem;
+      .custom-spinner {
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+        animation: rotate 1s linear infinite;
+      }
+      .custom-spinner circle {
+        stroke-dasharray: 60;
+        stroke-dashoffset: 50;
+      }
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    .button-cancel {
+      background-color: white;
+      color: orange;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 16px;
+      gap: 8px;
+      width: 79px;
+      height: 36px;
+      background: #f7f2e4;
+      border-radius: 8px;
+    }
+    button {
+      border: none;
+    }
+    button:hover {
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+  }
+}

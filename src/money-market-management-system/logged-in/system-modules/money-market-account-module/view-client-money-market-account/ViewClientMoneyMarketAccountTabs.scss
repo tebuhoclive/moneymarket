@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import "../../../../../shared/styles/Variables.scss";
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+
+.account-module-tabs {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  .tabs {
+    display: flex;
+    position: relative;
+    background-color: $grey-color;
+    box-shadow: 0 0 1px 0 rgba($primary-color, 0.15), 0 6px 12px 0 rgba($primary-color, 0.15);
+    border-radius: 6px; // just a high number to create pill effect
+
+    * {
+      z-index: 2;
+    }
+
+    height: 50px;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 154px;
+    font-size: $font-size-md;
+    font-weight: 600;
+    font-family: "Inter";
+    color: $white-color;
+    border-radius: 6px; // just a high number to create pill effect
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+  }
+
+  input[type="radio"]:checked {
+    color: $white-color !important;
+  }
+
+
+  input[id="general-information-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  input[id="income-distribution-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(100%);
+      }
+    }
+  }
+
+
+  input[id="transaction-limitation-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(200%);
+      }
+    }
+  }
+
+  input[id="withholding-tax-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(300%);
+      }
+    }
+  }
+
+  input[id="cession-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(400%);
+      }
+    }
+  }
+
+  input[id="transaction-history-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(500%);
+      }
+    }
+  }
+
+  input[id="communication-filing-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(600%);
+      }
+    }
+  }
+
+  input[id="audit-trail-tab"] {
+    &:checked {
+      &~.glider {
+        transform: translateX(700%);
+      }
+    }
+  }
+
+  .glider {
+    position: absolute;
+    display: flex;
+    height: 50px;
+    width: 155px;
+    background-color: $primary-dark;
+    color: #fff;
+    z-index: 1;
+    border-radius: 6px; // just a high number to create pill effect
+    transition: 0.25s ease-out;
+  }
+
+  @media (max-width: 700px) {
+    .tabs {
+      transform: scale(0.6);
+    }
+  }
+}
+
+.badge-acc {
+  background-color: red;
+  padding: 9px;
+}
+
+.badge-acc-deposit {
+  background-color: green;
+  padding: 9px;
+}
+
+.badge-acc-withdrawal {
+  background-color: Orange;
+  padding: 9px;
+}
+
+.badge-acc-else {
+  background-color: teal;
+  padding: 9px;
+}

@@ -1,0 +1,257 @@
+/* IJG System styling */
+
+//modals
+
+//forms
+.form-spacer {
+  height: form-spacer-height;
+}
+
+.form-row {
+  margin-bottom: form-spacer-row-margin-bottom;
+}
+
+//tables
+.uk-table,
+.uk-table thead th {
+  color: var(--color-text) !important;
+}
+
+//buttons
+
+//headings
+.main-title-sm {
+  color: var(--color-text);
+  font-weight: 900;
+  font-size: $font-size-md;
+  text-transform: uppercase;
+}
+
+.main-title-sm-no-font-weight {
+  color: var(--color-text);
+  font-size: $font-size-md;
+  text-transform: uppercase;
+}
+
+.main-title-md {
+  color: var(--color-text);
+  font-weight: 900;
+  font-size: $font-size-lg;
+  text-transform: uppercase;
+}
+
+.main-title-lg {
+  margin-top: 10px;
+  color: var(--color-text);
+  font-weight: 900;
+  font-size: $font-size-xl;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--color-text);
+}
+
+textarea:read-only {
+  color: var(--color-text);
+}
+
+//grids
+.get-archived-transactions-button {
+  position: fixed;
+  bottom: 20px; // Adjust as needed for spacing from the bottom
+  right: 20px; // Adjust as needed for spacing from the right
+  background-color: $secondary-btn;
+  font-size: 23px;
+
+  &:hover {
+    background-color: #2f80ed; // Darken the button on hover
+  }
+}
+
+.spinner-loader {
+  color: $card-background-color-dark;
+}
+
+.archive-icon {
+  color: $card-background-color-dark;
+}
+
+//text
+
+//page format
+.page-main-card {
+  border-radius: $border-radius-lg;
+  background-color: var(--main-card-background-color);
+  // padding: 18px;
+
+  .page-item {
+    border-radius: $border-radius;
+    margin: 8px 0px;
+    background-color: $white-color;
+    transition: 0.3s ease-in-out all;
+    padding: 10px;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+
+    .span-label {
+      display: block;
+      font-size: $font-size-xs;
+      color: $primary-color;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 1;
+      transition: 0.3s ease-in-out all;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .title {
+    font-size: $font-size-xxxl;
+    color: var(--color-text);
+    font-weight: $font-weight-extra-bold;
+    text-transform: uppercase;
+  }
+
+  .controls {
+    display: flex;
+
+    @media screen and (max-width: 430px) {
+      display: flex;
+      justify-content: space-between;
+
+      &.mg-top {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.toolbar-new {
+  .controls {
+    margin-top: 5px;
+
+    select {
+      height: 35px;
+    }
+  }
+}
+
+.grid {
+  * {
+    color: var(--color-text) !important;
+  }
+
+  .btn {
+    color: var(--color-text) !important;
+  }
+
+  .MuiInputBase-formControl {
+    border: 0.5px var(--color-text) solid !important;
+    color: (--color-text) !important;
+  }
+}
+
+.uk-text-danger {
+  color: $danger-color !important;
+}
+
+.legend {
+  // margin-top: 20px;
+  font-size: 12px;
+
+  h4 {
+    margin-bottom: 10px;
+    color: var(--color-text);
+  }
+
+  span {
+    color: var(--color-text);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .color-box {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+
+  .color-box.accepted {
+    background-color: $success-color;
+  }
+
+  .color-box.rejected {
+    background-color: $danger-color;
+  }
+
+  .color-box.not-uploaded {
+    background-color: $white-color;
+  }
+
+  .color-box.warning {
+    background-color: $warning-color;
+  }
+}
+
+.error {
+  span {
+    color: $danger-color !important;
+  }
+
+  color: $danger-color !important;
+
+  td {
+    color: $danger-color !important;
+  }
+
+}
+
+.success {
+
+  span {
+    color: $success-color !important;
+  }
+
+  color: $success-color !important;
+
+  td {
+    color: $success-color !important;
+  }
+}
+
+.warning {
+  span {
+    color: $warning-color !important;
+  }
+
+  color: $warning-color !important;
+
+  td {
+    color: $warning-color !important;
+  }
+}
+
+.uk-label-primary {
+  background-color: $primary-dark;
+  color: $white-color;
+}
+
+.required::after {
+  content: ' *';
+  color: red;
+}

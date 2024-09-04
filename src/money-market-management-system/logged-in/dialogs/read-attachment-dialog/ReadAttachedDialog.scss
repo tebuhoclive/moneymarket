@@ -1,0 +1,19 @@
+.read-attachment-modal {
+  min-height: 100vh;
+
+  .title {
+    margin: 0;
+    padding: 0px 20px;
+    line-height: 40px;
+  }
+
+  .close {
+    padding: 0px 20px;
+    line-height: 40px;
+  }
+
+  iframe {
+    height: calc(100vh - 40px);
+    width: 100%;
+  }
+}

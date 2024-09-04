@@ -1,0 +1,62 @@
+.lotsSingleSelect {
+  width: 100%;
+  position: relative;
+
+  .input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    &.uk-select.uk-form-small {
+      border-radius: 5px;
+    }
+  }
+
+  .clearButton {
+    position: absolute;
+    right: 10px;
+    top: 3px;
+  }
+
+  .optionsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 1000;
+    border-radius: 7px;
+
+    .option {
+      padding: 8px;
+      cursor: pointer;
+      color: grey;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+    .noOptions {
+      padding: 8px;
+      color: blacK;
+    }
+  }
+}
+.custom-select-wrapper {
+  .lotsSingleSelect {
+    width: 100px; // Adjust this value to make it longer
+
+    .input {
+      width: 100%;
+      height: 36px; // Adjust this value to make it thinner
+    }
+
+    .optionsList {
+      width: 100%;
+    }
+  }
+}

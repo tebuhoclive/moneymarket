@@ -1,0 +1,100 @@
+@import "../../styles/Variables.scss";
+
+.single-select {
+  min-width: 250px;
+  font-size: $font-size;
+  border: 0;
+
+  .select__control {
+    min-height: 30px; // TODO: make this dynamic
+    border-radius: $border-radius;
+    background-color: var(--input-background-color);
+    color: var(--color-text) !important;
+    border: none;
+
+    &.select__control--is-focused {
+      border-color: #1e87f0 !important;
+      box-shadow: none;
+      color: var(--color-text);
+    }
+  }
+
+  .select__single-value {
+    color: var(--color-text) !important;
+  }
+
+  .select__option {
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+    &:active {
+      background-color: #fff;
+      color: $white-color !important;
+    }
+
+    &:focus {
+      background-color: #fff;
+      color: $white-color !important;
+    }
+
+    &--is-disabled {
+      margin-top: 5px;
+      color: #172b4d !important;
+      font-size: $font-size-xs;
+      font-weight: $font-weight-bold;
+      background-color: transparent !important;
+    }
+  }
+
+  .grouped-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .grouped-badge {
+      display: inline-block;
+      background-color: #ebecf0;
+      color: #172b4d;
+      font-size: $font-size-sm;
+      font-weight: $font-weight;
+      line-height: 1;
+      min-width: 1;
+      padding: 0.15em 0.5em;
+      border-radius: 1em;
+      text-align: center;
+    }
+  }
+}
+
+#hidden-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+
+  input {
+    width: 0;
+    height: 0;
+    color: white;
+  }
+}
+
+/* Dropdown styling */
+.react-select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+/* Hidden input styling */
+#hidden-input {
+  display: none;
+}

@@ -1,0 +1,30 @@
+// _variables.scss
+$progress-bar-height: 12px;
+$progress-bar-color: #3b82f6;
+$background-color: #f3f4f6;
+$border-radius: 12px;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// _mixins.scss
+@mixin transition($property, $duration, $ease) {
+  transition: $property $duration $ease;
+}
+
+// ProgressBar.scss
+
+.new-progress {
+  width: 100%;
+  max-width: 400px;
+  margin: 16px 0px; /* Adjust margin to position correctly in bottom-right */
+  background-color: $background-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+
+  .progress-bar {
+    height: $progress-bar-height;
+    background-color: $progress-bar-color;
+    border-radius: $border-radius;
+    @include transition(width, 0.4s, ease-in-out);
+  }
+}

@@ -1,0 +1,59 @@
+@import-normalize; /* bring in normalize.css styles */
+
+@import "./shared/styles/Variables.scss";
+@import "./shared/styles/Main.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800&display=swap");
+
+html,
+body {
+  height: 100%;
+  overflow-y: auto;
+  background-color: var(--color-page-background);
+}
+
+:root {
+  //light mode color scheme
+  --color-page-background: #{$body-background-light};
+
+  //text
+  --color-text: #{$text-color-blue};
+  --color-text-blue: #{$text-color-black};
+
+  //backgrounds
+  --background-color: #{$background-color-light};
+  --card-background-color: #{$card-background-color-light};
+  --main-card-background-color: #{$white-color};
+  --input-background-color: #{$white-color};
+  --button-background-color: #{$primary-light};
+
+  // drawer
+  --drawer-background-color: #{$white-color};
+  --active-nav-background: #{$background-color-dark};
+  --active-nav-item: #{$white-color};
+
+  --expanded-parent-nav-item: #{$white-color};
+}
+
+.dark {
+
+  //   //light mode color scheme
+  --color-page-background: #{$body-background-dark};
+
+  //   //text
+  --color-text: #{$white-color};
+  --color-text-blue: #{$text-color-blue};
+
+  //   //backgrounds
+  --background-color: #{$background-color-dark};
+  --card-background-color: #{$card-background-color-dark};
+  --main-card-background-color: #{$background-color-dark};
+  --input-background-color: #{$card-background-color-dark};
+  --button-background-color: #{primary-dark};
+
+  //   // drawer
+  --drawer-background-color: #{$background-color-dark};
+  --active-nav-background: #{$background-color-light};
+  --active-nav-item: #{$text-color-blue};
+
+  --expanded-parent-nav-item: #{$primary-color};
+}

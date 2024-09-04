@@ -1,0 +1,30 @@
+.instruments {
+    .instrument-main-card {
+        border-radius: $border-radius-lg;
+        background-color: var(--main-card-background-color);
+
+        .instrument-card {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            border-radius: $border-radius-lg;
+            background-color: var(--card-background-color);
+
+            .in-title {
+                color: var(--color-text);
+                font-size: $font-size-lg;
+            }
+
+            .in-description {
+                color: $primary-color;
+            }
+
+            .in-card-footer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

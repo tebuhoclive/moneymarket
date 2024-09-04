@@ -1,0 +1,18 @@
+.normalClientStatement {
+  position: relative; // Ensure the parent has position: relative
+
+  .something-wrong {
+    position: fixed; // Fixes the position of the element
+    bottom: 10px; // Adjust as necessary to position it from the bottom
+    right: 10px; // Adjust as necessary to position it from the right
+    background-color: #f8d7da; // Light red background for error
+    color: #721c24; // Dark red text color
+    border: 1px solid #f5c6cb; // Red border for error
+    padding: 10px; // Space inside the error box
+    border-radius: 5px; // Slightly rounded corners
+    font-size: 14px; // Adjust font size
+    font-weight: bold; // Bold text
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); // Slight shadow for better visibility
+    z-index: 1000; // Ensure it's above other content
+  }
+}

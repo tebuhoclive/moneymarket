@@ -1,0 +1,221 @@
+.upload-button {
+    border: dashed 3px $primary-dark;
+}
+
+.upload-button::placeholder {
+    color: $black-color !important;
+    text-align: center;
+    font-weight: $font-weight-bold;
+}
+
+label {
+    color: var(--color-text) !important;
+    font-weight: $font-weight-semibold;
+}
+
+input {
+    padding: $input-padding;
+    border-radius: $border-radius;
+    width: 100%;
+    border-width: $border-width;
+    font-family: 'Inter';
+    border-color: $grey-color;
+
+    &:disabled {
+        color: $white-color
+    }
+}
+
+.input-bold {
+    font-weight: $font-weight-black;
+}
+
+.uk-checkbox {
+    width: 18px;
+    margin-right: 5px;
+    border-width: $border-width;
+    border-color: $grey-color;
+
+    &:checked {
+        background-color: $primary-dark;
+        border-color: $primary-dark !important;
+    }
+}
+
+select {
+    padding: $input-padding;
+    border-radius: $border-radius;
+    width: 100%;
+    border-width: $border-width;
+    border-color: $grey-color !important;
+    border-style: solid;
+    font-family: 'Inter';
+}
+
+textarea {
+    padding: $input-padding;
+    border-radius: $border-radius;
+    width: 100%;
+    font-family: 'Inter';
+
+    &:disabled {
+        color: $white-color
+    }
+}
+
+.single-select {
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-sm;
+    width: 100% !important;
+
+    .select__control {
+        min-height: 22px;
+        height: 30px;
+        width: 100%;
+        border-width: $border-width !important;
+    }
+
+    .select__value-container {
+        min-height: 22px;
+        height: 30px;
+        width: 100%;
+        font-family: 'Inter';
+
+    }
+
+    .select__dropdown-indicator {
+        padding-top: 4px;
+        color: $primary-dark;
+    }
+
+    .select__clear-indicator {
+        padding-top: 1px !important;
+        color: $danger-color;
+    }
+
+    .select__indicators {
+        color: $primary-dark;
+    }
+
+    .select__menu {
+        width: 350px;
+        z-index: 30 !important;
+    }
+
+    .select__menu-list {
+        width: 350px;
+        height: 400px;
+    }
+
+    .select__option {
+        height: 20px;
+        padding: 0 6px;
+        background-color: transparent;
+        color: $black-color;
+        font-size: $font-size-sm;
+
+        &:hover {
+            color: $white-color;
+            background-color: $primary-dark;
+            cursor: pointer;
+        }
+    }
+}
+
+td {
+    .single-select {
+        margin: 0;
+        padding: 0;
+        font-size: $font-size-sm;
+
+        .select__control {
+            min-height: 22px;
+            height: 30px;
+            width: 100%;
+        }
+
+        .select__value-container {
+            margin-top: -10px;
+            padding-top: 6px;
+            min-height: 22px;
+            height: 30px;
+            width: 100%;
+            font-family: 'Inter';
+        }
+
+        .select__dropdown-indicator {
+            padding-top: 4px;
+            color: $primary-dark;
+        }
+
+        .select__clear-indicator {
+            color: $danger-color;
+        }
+
+        .select__indicators {
+            padding-top: 1px;
+            color: $primary-dark;
+        }
+
+        .select__menu {
+            width: 350px;
+            z-index: 3 !important;
+            position: relative;
+        }
+
+        .select__menu-list {
+            width: 350px;
+            z-index: 3 !important;
+        }
+
+        .select__option {
+            height: 20px;
+            padding: 0 2px;
+            background-color: transparent;
+            color: $black-color;
+
+            &:hover {
+                color: $white-color;
+                background-color: $primary-dark;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+/* SingleSelect.module.scss */
+
+/* Styles for the Autocomplete component */
+.custom-component {
+    width: 100%;
+    background-color: #fff;
+    border: none !important;
+    border-radius: $border-radius !important;
+
+
+    .MuiInputLabel-formControl {
+        display: none !important;
+        border: none !important;
+    }
+
+    .MuiInputBase-formControl {
+        height: 30px !important;
+        border: none !important;
+        border-radius: $border-radius !important;
+        border-width: $border-width !important;
+    }
+
+    .MuiInputBase-input,
+    .MuiOutlinedInput-input,
+    .MuiInputBase-inputAdornedEnd,
+    .MuiAutocomplete-input,
+    .MuiAutocomplete-inputFocused {
+        margin-top: -15px !important;
+        height: 30px !important;
+        border: none !important;
+        border-radius: $border-radius !important;
+        border-width: $border-width !important;
+    }
+}

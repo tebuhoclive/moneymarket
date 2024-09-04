@@ -1,0 +1,62 @@
+/* OfflinePage.scss */
+
+$primary-color: #fdd835;
+$secondary-color: #424242;
+$background-color: #051e38;
+$text-color: #fff;
+$button-color: #fdd835;
+$button-hover-color: darken($button-color, 10%);
+
+.offline-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .offline-content {
+    background: #051e38;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(199, 199, 199, 0.1);
+    max-width: 400px;
+    width: 100%;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: $text-color;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: $secondary-color;
+    }
+
+    .offline-illustration {
+      margin-bottom: 2rem;
+      svg {
+        fill: $primary-color;
+      }
+    }
+
+    .retry-button {
+      background-color: $button-color;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $button-hover-color;
+      }
+    }
+  }
+}

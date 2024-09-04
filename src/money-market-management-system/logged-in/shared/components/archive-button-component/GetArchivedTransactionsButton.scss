@@ -1,0 +1,10 @@
+.get-archived-transactions-button {
+  position: fixed;
+  bottom: 20px;  // Adjust as needed for spacing from the bottom
+  right: 20px;  // Adjust as needed for spacing from the right
+  background-color: white;
+  font-size: 23px;
+  &:hover {
+    background-color: #2f80ed;  // Darken the button on hover
+  }
+}

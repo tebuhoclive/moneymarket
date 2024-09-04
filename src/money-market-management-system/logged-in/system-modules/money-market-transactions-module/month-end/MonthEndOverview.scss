@@ -1,0 +1,17 @@
+.btn-custom{
+    background-color: var(--color-text);
+    color: var(--input-background-color) !important;
+    font-weight: 900;
+    font-family: 'Inter' !important;
+    border-radius: 180px;
+    padding: 12px 12px;
+    border: none;
+
+    span{
+        background-color: var(--input-background-color);
+        color: var(--color-text) !important;
+        border-radius: 90px 90px;
+        padding: 12px;
+        margin-right: -12px
+    }
+}

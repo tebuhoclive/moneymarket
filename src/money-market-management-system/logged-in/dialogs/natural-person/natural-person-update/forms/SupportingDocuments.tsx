@@ -1,0 +1,65 @@
+import { observer } from "mobx-react-lite";
+import { FormEvent, useState } from "react";
+
+import Toolbar from "../../../../shared/components/toolbar/Toolbar";
+import ErrorBoundary from "../../../../../../shared/components/error-boundary/ErrorBoundary";
+import { INaturalPerson } from "../../../../../../shared/models/clients/NaturalPersonModel";
+import { useAppContext } from "../../../../../../shared/functions/Context";
+import InstructionFileUploader from "../../../../../../shared/components/instruction-file-upload/InstructionFileUploader";
+
+interface IProps {
+    client: INaturalPerson;
+    setClient: React.Dispatch<React.SetStateAction<INaturalPerson>>;
+    onSubmitSupportingDocuments: (e: FormEvent<HTMLFormElement>) => void;
+    onBackToRelatedParty: () => void;
+    loading: boolean;
+}
+
+export const SupportingDocuments = observer((props: IProps) => {
+    const { store } = useAppContext();
+    const { client, setClient, onSubmitSupportingDocuments, onBackToRelatedParty, loading } = props;
+
+    const [copyOfIdFileURL, setCopyOfIdFileURL] = useState("");
+    const [reasonForCopyOfIdAttachment, setReasonForCopyOfIdAttachment] = useState("");
+
+    const handleCopyOfIdFileUpload = (url: string) => {
+        setCopyOfIdFileURL(url);
+      };
+    const handleReasonForCopyOfIdAttachment = (reason: string) => {
+        setReasonForCopyOfIdAttachment(reason);
+      };
+
+    return (
+        <ErrorBoundary>
+            <form className="uk-form-stacked uk-grid-small" data-uk-grid
+                onSubmit={onSubmitSupportingDocuments}>
+                <div className="uk-width-1-1 uk-margin-top-small">
+                    <hr className="uk-width-1-1" />
+                    <Toolbar title={"Supporting Documents"}
+                    />
+                    <hr className="uk-width-1-1" />
+                </div>
+                <div className="uk-width-1-2">
+                    <InstructionFileUploader
+                        onFileUpload={handleCopyOfIdFileUpload}
+                        onProvideReason={handleReasonForCopyOfIdAttachment}
+                        fileUrl={copyOfIdFileURL}
+                        reasonForNotProvingFile={reasonForCopyOfIdAttachment}
+                        label="Copy of Namibian Identity Document or Foreign Passport"
+                        allocation={""}
+                        value={reasonForCopyOfIdAttachment}
+                        fileValue={copyOfIdFileURL}
+                    />
+                </div>
+                <div className="uk-width-1-1 uk-text-right">
+                    <button className="btn btn-danger" type="button" onClick={onBackToRelatedParty}>Back</button>
+                    <button className="btn btn-warning" type="button">Save As Draft</button>
+                    <button className="btn btn-primary" type="submit">
+                        {store.client.naturalPerson.selected ? 'Update' : 'Create Profile'}
+                        {loading && <span data-uk-spinner="ratio: .5"></span>}
+                    </button>
+                </div>
+            </form>
+        </ErrorBoundary >
+    );
+});

@@ -1,0 +1,26 @@
+.heads-up-alert {
+    background-color: white;
+    margin: 40px;
+    padding: 20px;
+    width:max-content;
+    border-radius: 15px;
+    text-align:start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heads-up-alert > div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; 
+    margin-bottom: 15px;
+  }
+  .heads-up-alert h3 {
+    margin: 0 0 0 10px;
+  }
+  
+  .heads-up-alert div:nth-child(2) {
+    font-size: 16px;
+    color: #333;
+  }
+  

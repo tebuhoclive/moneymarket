@@ -1,0 +1,125 @@
+.custom-modal-style {
+  border-radius: $border-radius;
+  background-color: var(--background-color);
+
+  .uk-modal-dialog {
+    padding: $padding-lg;
+    height: 100%;
+
+    .dialog-content {
+      height: 55vh !important;
+      overflow-y: auto;
+    }
+
+    .dialog-content-amend {
+      height: 55vh !important;
+      overflow-y: auto;
+    }
+
+    .dialog-content.has-kit-table {
+      height: 49vh !important;
+    }
+
+    .dialog-content-amend.has-kit-table-amend {
+      height: 49vh !important;
+    }
+  }
+}
+
+.deposit-select-bank {
+  margin-bottom: $margin-md-px;
+
+  .select-bank-width {
+    width: 100%;
+  }
+}
+
+.deposit {
+  padding: $padding;
+  overflow-y: auto;
+
+  .first-heading {
+    margin-right: $margin-md-2;
+  }
+
+  .second-heading {
+    margin-left: $margin-md;
+  }
+}
+
+.modal-split-view-visible-scrollbar {
+  display: block;
+  // width: $drawer-width;
+
+  overflow-y: scroll;
+  height: 96%;
+  padding: $padding-sm-2;
+  margin: $margin-sm-1 auto;
+  // outline: 2px dashed cornflowerblue;
+}
+
+.modal-split-view-visible-scrollbar::-webkit-scrollbar {
+  width: $small-width-2;
+  cursor:pointer;
+  height: 96%;
+  background-color: $muted-grey-color;
+  /* or add it to the track */
+}
+
+.modal-split-view-visible-scrollbar::-webkit-scrollbar-thumb {
+  background: $card-background-color-dark;
+}
+
+.deposit-form {
+  .modal-split-view-visible-scrollbar {
+    display: block;
+    // width: $drawer-width;
+    overflow-y: scroll;
+    height: 96%;
+    padding: $padding-sm-2;
+    margin: $margin-sm-1 auto;
+    // outline: 2px dashed cornflowerblue;
+  }
+
+  .modal-split-view-visible-scrollbar::-webkit-scrollbar {
+    width: $small-width-2;
+    height: 96%;
+    background-color: $muted-grey-color;
+    /* or add it to the track */
+  }
+
+  .modal-split-view-visible-scrollbar::-webkit-scrollbar-thumb {
+    background: $card-background-color-dark;
+  }
+
+  .uk-form-label {
+    font-size: $font-size-md;
+    margin-bottom: $margin-sm-px;
+  }
+
+  .deposit-form .uk-select.uk-form-small,
+  .deposit-form .uk-input.uk-form-small {
+    font-size: $font-size-md;
+    padding: $padding-sm-2;
+    height: $small-height-2;
+  }
+
+  .deposit-form .uk-width-1-1.uk-text-right.uk-margin-small-top {
+    margin-top: $margin-sm-px-2;
+    margin-right: $margin-xsm-px-2;
+  }
+
+  .deposit-form .uk-margin-small-bottom-32 {
+    margin-bottom: $margin-md-px;
+  }
+
+  .statement-reference-margin {
+    margin-bottom: $margin-md-px;
+  }
+
+  .ijg-bank-account-select {
+    font-size: $font-size-md;
+    padding: $padding-sm-2;
+    height: $small-height-2;
+  }
+}

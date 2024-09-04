@@ -1,0 +1,78 @@
+.transactions-page {
+    min-height: 100vh;
+    margin-top: 11px;
+    margin-bottom: 4rem;
+    overflow: auto;
+  }
+
+  .transactions-card{
+    background-color: var(--background-color);
+    padding: 20px;
+  }
+  .transactions-page .sticky-top hr {
+    background-color: transparent !important;
+    height: 2px;
+  }
+  .transactions-page .sticky-top .transactions-page-title {
+    font-size: 2rem;
+    color: var(--color-text);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .transactions-page .transactions-page-main-card {
+    border-radius: 8px;
+    background-color: transparent;
+    padding: 0;
+  }
+  .transactions-page .transactions-page-main-card .transactions-page-item {
+    border-radius: 4px;
+    margin: 8px 0px;
+    background-color: #fff;
+    transition: 0.3s ease-in-out all;
+    padding: 20px;
+  }
+  .transactions-page .transactions-page-main-card .transactions-page-item:hover {
+    background-color: #ffd;
+  }
+  .transactions-page .transactions-page-main-card .transactions-page-item .span-label {
+    display: block;
+    font-size: 0.8em;
+    color: #4095D1;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    transition: 0.3s ease-in-out all;
+    font-weight: 600;
+  }
+  .transactions-page .transactions-page-main-card .icon-container {
+    font-size: 24px;
+  }
+  .transactions-page .transactions-page-main-card .total {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .transactions-page .instrument-card {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: var(--card-background-color);
+  }
+  .transactions-page .instrument-card button {
+    background-color: #4095D1;
+  }
+  .transactions-page .instrument-card .in-title {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .transactions-page .instrument-card .in-description {
+    color: #4095D1;
+  }
+  .transactions-page .instrument-card .in-card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
